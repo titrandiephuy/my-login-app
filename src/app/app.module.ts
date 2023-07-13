@@ -9,6 +9,9 @@ import { ProtectedComponent } from './protected.component';
 
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AddEditTaskComponent } from './components/add-edit-task/add-edit-task.component';
+import { TaskListComponent } from './components/task-list/task-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,12 +19,15 @@ import { WelcomeComponent } from './welcome/welcome.component';
     LoginComponent,
     ProtectedComponent,
     CallbackComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AddEditTaskComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

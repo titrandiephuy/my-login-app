@@ -1,5 +1,5 @@
 
-<button routerLink=""> Home </button>
+<button routerLink="/welcome"> Home </button>
 <button routerLink="/protected"> Protected page </button>
 <button *ngIf="!isAuthenticated" routerLink="/login"> Login page </button>
 <button *ngIf="isAuthenticated" (click)="oktaAuth.logout()"> Logout </button>

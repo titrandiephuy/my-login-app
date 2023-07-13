@@ -1,0 +1,24 @@
+<div class="container-fluid bg-light">
+  <div class="container bg-light">
+    <div class="row mt-4" height="500px;">
+      <div class="col"></div>
+      <div class="col-md-6 bg-white shadow">
+        <div class="shadow">
+          <div style="overflow-y: auto; height: 350px;">
+            <div class="m-3" *ngFor="let task of taskArr">
+              <div class="p-2 shadow border">
+                <div class="input-group row ps-3">
+                  <div class="card col-md-10 border-0">{{task.task_name}}</div>
+                  <button class="btn btn-outline-primary col me-2" (click)="triggerEdit(task)">Edit</button>
+                  <button class="btn btn-outline-danger col" (click)="deleteTask(task)">x</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
