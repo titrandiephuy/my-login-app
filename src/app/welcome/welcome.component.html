@@ -1,3 +1,3 @@
-<app-add-edit-task></app-add-edit-task>
-<app-task-list></app-task-list>
+<app-add-edit-task [editTaskValue]="currentEditTaskValue" (newTaskEvent)="addTask($event)" (saveEditTaskEvent)="saveEditTask($event)"></app-add-edit-task>
+<app-task-list [tasks]="currentTaskList" (deleteTaskEvent)="deleteTask($event)" (editTaskEvent) ="editTask($event)"></app-task-list>
 <router-outlet></router-outlet>

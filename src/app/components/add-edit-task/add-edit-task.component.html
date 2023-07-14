@@ -9,14 +9,10 @@
         <div class="shadow">
 
           <div class="input-group p-4">
-            <input *ngIf="editTaskValue" type="text" class="form-control" placeholder="Enter task" name="task"
-              [(ngModel)]="editTaskValue">
-            <input *ngIf="!editTaskValue" type="text" class="form-control" placeholder="Enter task" name="task"
-              [(ngModel)]="addTaskValue">
-            <button *ngIf="!editTaskValue" class="btn btn-outline-success" type="button"
-              (click)="addTask();">Submit</button>
-            <button *ngIf="editTaskValue" class="btn btn-outline-success" type="button"
-              (click)="editTask();">Save</button>
+            <input *ngIf="!editTaskValue" type="text" class="form-control" placeholder="Enter task" name="task" [(ngModel)] = "addTaskValue">
+            <button *ngIf="!editTaskValue" class="btn btn-outline-success" type="button" (click)="addNewTask(addTaskValue)">Submit</button>
+            <input *ngIf="editTaskValue" type="text" class="form-control" placeholder="Enter task" name="editTask" [(ngModel)]="editTaskValue">
+            <button *ngIf="editTaskValue" class="btn btn-outline-success" type="button" (click)="saveEditTask(editTaskValue)">Save</button>
           </div>
 
         </div>
@@ -25,4 +21,3 @@
     </div>
   </div>
 </div>
-<router-outlet></router-outlet>
